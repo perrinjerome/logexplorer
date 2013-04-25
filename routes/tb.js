@@ -11,10 +11,6 @@ db.open(function(err, db) {
     if(!err) {
         console.log("Connected to 'logexplorer' database");
         db.collection('logexplorer', {safe:true}, function(err, collection) {
-            if (err) {
-                console.log("The 'longrequestlog' collection doesn't exist. Creating it with sample data...");
-                populateDB();
-            }
                 populateDB();
         });
     }
